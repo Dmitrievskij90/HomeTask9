@@ -10,7 +10,7 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     private let flagImageView = UIImageView()
-    private  let startButton = UIButton()
+    private  let startButton = UIButton(type: .system)
     private let titleLabel = UILabel()
     private let lineView = UIView()
     private let topView = UIView()
@@ -24,7 +24,7 @@ class WelcomeViewController: UIViewController {
         let view = UIView(frame: UIScreen.main.bounds)
         view.backgroundColor = .white
         self.view = view
-        view.backgroundColor = #colorLiteral(red: 0.5, green: 0.7485652143, blue: 0.8929982812, alpha: 1)
+        view.backgroundColor = UIColor(red: 94 / 255, green: 167 / 255, blue: 205 / 255, alpha: 1)
     
         view.addSubview(lineView)
         view.addSubview(startButton)
@@ -85,7 +85,7 @@ class WelcomeViewController: UIViewController {
         startButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         startButton.layer.borderWidth = 3
         
-        lineView.backgroundColor = #colorLiteral(red: 1, green: 0.3506166162, blue: 0.2081147492, alpha: 1)
+        lineView.backgroundColor = UIColor(red: 241 / 255, green: 90 / 255, blue: 47 / 255, alpha: 1)
         
         titleLabel.text = "Main road"
         titleLabel.textColor = .black
