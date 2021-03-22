@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O8E-64-0Zs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HomeTask9_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-ln-6W9">
+                                <rect key="frame" x="107" y="393" width="200" height="110"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="mqr-dQ-wcC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ubl-CJ-nl4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Get the weather">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mLt-DQ-tAf" kind="show" identifier="goToWeather" id="ieg-uh-AZx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pYj-ln-6W9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="88a-tm-HyV"/>
+                            <constraint firstItem="pYj-ln-6W9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pNe-jx-EWf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="agf-BT-DZG"/>
+                    <connections>
+                        <outlet property="weatherButton" destination="pYj-ln-6W9" id="izm-64-kVO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.7391304347827" y="77.678571428571431"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="GrQ-LG-eMZ">
+            <objects>
+                <viewController storyboardIdentifier="WeatherVC" id="mLt-DQ-tAf" customClass="WeatherViewController" customModule="HomeTask9_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="saX-a8-hAs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CjI-Ud-SFd">
+                                <rect key="frame" x="10" y="358" width="394" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5I7-jH-NNf">
+                                        <rect key="frame" x="10" y="10" width="374" height="160"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="oa7-BQ-4F1">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="160"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hRI-78-qXe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="137.5"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVS-LH-YxZ">
+                                                        <rect key="frame" x="0.0" y="139.5" width="119.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hP5-ur-GNB">
+                                                <rect key="frame" x="127.5" y="0.0" width="119" height="160"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arv-hB-BZU">
+                                                <rect key="frame" x="254.5" y="0.0" width="119.5" height="160"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="58"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hP5-ur-GNB" firstAttribute="leading" secondItem="oa7-BQ-4F1" secondAttribute="trailing" constant="8" symbolic="YES" id="2VN-gY-wFb"/>
+                                            <constraint firstItem="oa7-BQ-4F1" firstAttribute="top" secondItem="5I7-jH-NNf" secondAttribute="top" id="HSN-6G-95V"/>
+                                            <constraint firstItem="oa7-BQ-4F1" firstAttribute="leading" secondItem="5I7-jH-NNf" secondAttribute="leading" id="MfF-uX-O7n"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5I7-jH-NNf" secondAttribute="trailing" constant="10" id="6r3-eD-vxm"/>
+                                    <constraint firstItem="5I7-jH-NNf" firstAttribute="leading" secondItem="CjI-Ud-SFd" secondAttribute="leading" constant="10" id="GIv-e5-Cdg"/>
+                                    <constraint firstItem="5I7-jH-NNf" firstAttribute="top" secondItem="CjI-Ud-SFd" secondAttribute="top" constant="10" id="Qwv-9x-MCD"/>
+                                    <constraint firstAttribute="bottom" secondItem="5I7-jH-NNf" secondAttribute="bottom" constant="10" id="Z4e-UU-kax"/>
+                                    <constraint firstAttribute="height" constant="180" id="uVu-ke-rCv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Evp-qF-94O"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CjI-Ud-SFd" firstAttribute="centerX" secondItem="saX-a8-hAs" secondAttribute="centerX" id="7AN-JF-ckk"/>
+                            <constraint firstItem="CjI-Ud-SFd" firstAttribute="centerY" secondItem="saX-a8-hAs" secondAttribute="centerY" id="FYf-Bw-DcI"/>
+                            <constraint firstItem="Evp-qF-94O" firstAttribute="trailing" secondItem="CjI-Ud-SFd" secondAttribute="trailing" constant="10" id="pDc-Wn-sNU"/>
+                            <constraint firstItem="CjI-Ud-SFd" firstAttribute="leading" secondItem="Evp-qF-94O" secondAttribute="leading" constant="10" id="yah-Fq-Raz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tjJ-w2-KOt"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="hP5-ur-GNB" id="qYU-be-wCa"/>
+                        <outlet property="conditionImageView" destination="hRI-78-qXe" id="cKD-tU-o6J"/>
+                        <outlet property="descriptionLabel" destination="mVS-LH-YxZ" id="eLe-V3-I4u"/>
+                        <outlet property="temperatureLabel" destination="Arv-hB-BZU" id="RoC-aG-iwD"/>
+                        <outlet property="weatherView" destination="CjI-Ud-SFd" id="f8B-Xg-Hsf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wnw-Km-kPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913.0434782608697" y="77.678571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z2g-ZK-kSF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O8E-64-0Zs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Hp-JK-YK0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="doi-bq-sRB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yMi-Eq-Y3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
